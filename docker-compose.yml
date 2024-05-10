@@ -1,0 +1,24 @@
+version: '3.9'
+
+services:
+  insttantt.stepmanagement.api:
+    image: ${DOCKER_REGISTRY-}insttanttstepmanagementapi
+    build:
+      context: .
+      dockerfile: Insttantt.StepManagement.Api/Dockerfile
+    ports:
+          - "8080:81"
+  #   depends_on:
+  #       - "mongo"
+  # mongo:
+  #    image: mongo
+  #    ports:
+  #        - "27017:27017"
+  # sqlserver:
+  #   image: mcr.microsoft.com/mssql/server:2019-latest
+  #   container_name: sqlserver
+  #   environment:
+  #    SA_PASSWORD: Coldplay18
+  #    ACCEPT_EULA: Y
+  #   ports:
+  #       - "1433:1433"
